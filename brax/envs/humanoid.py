@@ -670,6 +670,11 @@ _SYSTEM_CONFIG = """
     mass: 1.0
     frozen { all: true }
   }
+  bodies {
+    name: "Target"
+    colliders { sphere { radius: 2 }}
+    frozen { all: true }
+  }
   joints {
     name: "abdomen_yz"
     parent: "torso"
@@ -1317,6 +1322,11 @@ _SYSTEM_CONFIG_SPRING = """
       z: 1.0
     }
     mass: 1.0
+    frozen { all: true }
+  }
+  bodies {
+    name: "Target"
+    colliders { sphere { radius: 2 }}
     frozen { all: true }
   }
   joints {
