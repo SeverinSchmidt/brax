@@ -672,7 +672,10 @@ _SYSTEM_CONFIG = """
   }
   bodies {
     name: "Target"
-    colliders { sphere { radius: 2 }}
+    colliders { sphere { radius: 2 }
+    position {x: 5
+              y: 5
+              z: 5}}
     frozen { all: true }
   }
   joints {
@@ -1326,9 +1329,13 @@ _SYSTEM_CONFIG_SPRING = """
   }
   bodies {
     name: "Target"
-    colliders { sphere { radius: 2 }}
+    colliders { sphere { radius: 2 }
+    position {x: 5
+              y: 5
+              z: 5}}
     frozen { all: true }
   }
+  
   joints {
     name: "abdomen_yz"
     stiffness: 27000
