@@ -682,10 +682,15 @@ _SYSTEM_CONFIG = """
     name: "Wall"
     colliders {
       box {
-        size { x: 0.75 y: 0.25 z: 2 }
+        halfsize { x: 2 y: 0.1 z: 3 }
       }
+    position {x: 2
+              y: 2
+              z: 0}
+    rotation {x: 0
+              y: 0
+              z: 1}
     }
-    inertia { x: 1 y: 1 z: 1 }
     mass: 1.0
   }
   joints {
