@@ -671,7 +671,7 @@ _SYSTEM_CONFIG = """
     frozen { all: true }
   }
   bodies {
-    name: "Target"
+    name: "target"
     colliders { sphere { radius: 2 }
     position {x: 5
               y: 5
@@ -679,17 +679,17 @@ _SYSTEM_CONFIG = """
     frozen { all: true }
   }
   bodies {
-    name: "Wall"
+    name: "wall"
     colliders {
       box {
         halfsize { x: 2 y: 0.1 z: 3 }
       }
-    position {x: 2
-              y: 2
+    position {x: 1
+              y: 0
               z: 0}
     rotation {x: 0
               y: 0
-              z: 1}
+              z: 90}
     }
     mass: 1.0
   }
@@ -993,6 +993,10 @@ _SYSTEM_CONFIG = """
   collide_include {
     first: "floor"
     second: "right_shin"
+  }
+  collide_include {
+    first: "floor"
+    second: "wall"
   }
   defaults {
     angles {
