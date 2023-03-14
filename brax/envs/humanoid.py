@@ -1327,14 +1327,7 @@ _SYSTEM_CONFIG_SPRING = """
     mass: 1.0
     frozen { all: true }
   }
-  bodies {
-    name: "Target"
-    colliders { sphere { radius: 2 }
-    position {x: 5
-              y: 5
-              z: 5}}
-    frozen { all: true }
-  }
+
   
   joints {
     name: "abdomen_yz"
