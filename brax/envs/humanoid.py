@@ -678,6 +678,16 @@ _SYSTEM_CONFIG = """
               z: 5}}
     frozen { all: true }
   }
+  bodies {
+    name: "Wall"
+    colliders {
+      box {
+        halfsize { x: 0.75 y: 0.25 z: 2 }
+      }
+    }
+    inertia { x: 1 y: 1 z: 1 }
+    mass: 1.0
+  }
   joints {
     name: "abdomen_yz"
     parent: "torso"
