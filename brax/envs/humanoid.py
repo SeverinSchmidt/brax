@@ -988,7 +988,7 @@ _SYSTEM_CONFIG = """
     }
     angular_damping: 30.0
   }
-  joints {
+"""  joints {
     name: "stalin"
     parent: "wall"
     child: "Hold1"
@@ -1037,7 +1037,7 @@ _SYSTEM_CONFIG = """
     name: "penis10"
     parent: "wall"
     child: "Hold10"
-  }
+  }"""
   actuators {
     name: "abdomen_yz"
     joint: "abdomen_yz"
