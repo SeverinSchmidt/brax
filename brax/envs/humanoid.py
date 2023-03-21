@@ -717,6 +717,11 @@ _SYSTEM_CONFIG = """
               z: 1} }
   }
   joints {
+    name: "stalin"
+    parent: "wall"
+    child: "hold1"
+  }
+  joints {
     name: "abdomen_yz"
     parent: "torso"
     child: "lwaist"
