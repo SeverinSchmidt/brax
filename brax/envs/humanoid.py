@@ -701,9 +701,9 @@ _SYSTEM_CONFIG = """
               y: -0.5
               z: 1.5}
     }
-    frozen { position {x: 0.9
-              y: -0.5
-              z: 1.5}  }
+    frozen { position {x: 1
+              y: 1
+              z: 1}  }
   }
   bodies {
     name: "hold2"
@@ -712,9 +712,9 @@ _SYSTEM_CONFIG = """
               y: 0
               z: 2.5}
     }         
-    frozen { position {x: 0.9
-              y: 0
-              z: 2.5} }
+    frozen { position {x: 1
+              y: 1
+              z: 1} }
   }
   joints {
     name: "abdomen_yz"
