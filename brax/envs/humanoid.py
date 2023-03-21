@@ -707,9 +707,8 @@ _SYSTEM_CONFIG = """
     colliders { sphere { radius: 0.1 }
     position {x: 0.9
               y: 0
-              z: 2.5}}
-    mass: 0.5         
-    frozen { all: true }
+              z: 2.5}}         
+    frozen { position }
   }
   joints {
     name: "abdomen_yz"
