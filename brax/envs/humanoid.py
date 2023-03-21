@@ -673,9 +673,9 @@ _SYSTEM_CONFIG = """
   bodies {
     name: "target"
     colliders { sphere { radius: 2 }
-    position {x: 0.95
-              y: 0
-              z: 2}}
+    position {x: 5
+              y: 5
+              z: 5}}
     frozen { all: true }
   }
   bodies {
@@ -697,15 +697,15 @@ _SYSTEM_CONFIG = """
   bodies {
     name: "hold1"
     colliders { sphere { radius: 0.05 }
-    position {x: 0.95
+    position {x: 0.9
               y: -0.5
               z: 1.5}}
     frozen { all: true }
   }
   bodies {
     name: "hold2"
-    colliders { sphere { radius: 0.025 }
-    position {x: 0.95
+    colliders { sphere { radius: 0.1 }
+    position {x: 0.9
               y: 0
               z: 2.5}}
     frozen { all: true }
