@@ -692,6 +692,7 @@ _SYSTEM_CONFIG = """
               z: 90}
     }
     mass: 1.0
+    frozen { all: true }
   }
   joints {
     name: "abdomen_yz"
@@ -1000,27 +1001,7 @@ _SYSTEM_CONFIG = """
   }
   collide_include {
     first: "wall"
-    second: "torso"
-  }
-  collide_include {
-    first: "wall"
-    second: "lwaist"
-  }
-  collide_include {
-    first: "wall"
-    second: "pelvis"
-  }
-  collide_include {
-    first: "wall"
-    second: "right_thigh"
-  }
-  collide_include {
-    first: "wall"
     second: "right_shin"
-  }
-  collide_include {
-    first: "wall"
-    second: "left_thigh"
   }
   collide_include {
     first: "wall"
@@ -1028,15 +1009,7 @@ _SYSTEM_CONFIG = """
   }
   collide_include {
     first: "wall"
-    second: "right_upper_arm"
-  }
-  collide_include {
-    first: "wall"
     second: "right_lower_arm"
-  }
-  collide_include {
-    first: "wall"
-    second: "left_upper_arm"
   }
   collide_include {
     first: "wall"
