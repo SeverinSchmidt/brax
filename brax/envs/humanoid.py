@@ -701,9 +701,7 @@ _SYSTEM_CONFIG = """
               y: -0.5
               z: 1.5}
     }
-    frozen { position {x: 1
-              y: 1
-              z: 1}  }
+    frozen { all: true  }
   }
   bodies {
     name: "hold2"
@@ -712,14 +710,17 @@ _SYSTEM_CONFIG = """
               y: 0
               z: 2.5}
     }         
-    frozen { position {x: 1
-              y: 1
-              z: 1} }
+    frozen { all: true }
   }
   joints {
     name: "stalin"
     parent: "wall"
     child: "hold1"
+  }
+  joints {
+    name: "goebbels"
+    parent: "wall"
+    child: "hold2"
   }
   joints {
     name: "abdomen_yz"
