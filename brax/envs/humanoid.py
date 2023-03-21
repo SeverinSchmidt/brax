@@ -708,6 +708,7 @@ _SYSTEM_CONFIG = """
     position {x: 0.9
               y: 0
               z: 2.5}}
+    mass: 0.5         
     frozen { all: true }
   }
   joints {
