@@ -697,6 +697,9 @@ _SYSTEM_CONFIG = """
   bodies {
     name: "hold1"
     colliders { sphere { radius: 0.05 }
+    position {x: 0.9
+              y: -0.5
+              z: 1.5}
     }
     frozen { position {x: 0.9
               y: -0.5
@@ -705,6 +708,9 @@ _SYSTEM_CONFIG = """
   bodies {
     name: "hold2"
     colliders { sphere { radius: 0.1 }
+    position {x: 0.9
+              y: 0
+              z: 2.5}
     }         
     frozen { position {x: 0.9
               y: 0
