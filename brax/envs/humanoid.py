@@ -694,61 +694,125 @@ _SYSTEM_CONFIG = """
     mass: 1.0
     frozen { all: true }
   }
-  bodies {
-    name: "hold1"
-    colliders { sphere { radius: 0.05 }
-    position {x: 0.9
-              y: -0.5
-              z: 1.5}
+  bodies { 
+    name: Hold1
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -1.018 z: -0.226 }
     }
     frozen { all: true  }
-  }
-  bodies {
-    name: "hold2"
+    }
+  bodies { 
+    name: Hold2
     colliders { sphere { radius: 0.1 }
-    position {x: 0.9
-              y: 0
-              z: 2.5}
-    }         
-    frozen { all: true }
-  }
-   bodies {
-    name: "hold3"
-    colliders { sphere { radius: 0.15 }
-    position {x: 0.9
-              y: 0
-              z: -1}
-    }         
-    frozen { all: true }
-  }
-   bodies {
-    name: "hold4"
-    colliders { sphere { radius: 0.15 }
-    position {x: 0.9
-              y: 0
-              z: 0}
-    }         
-    frozen { all: true }
-  }
+    position{x: 0.9 y: 0.553 z: 1.531 }
+    }
+    frozen { all: true  }
+    }
+  bodies { 
+    name: Hold3
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.113 z: -0.894 }
+    }
+    frozen { all: true  }
+    }
+  bodies { 
+    name: Hold4
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -1.907 z: -2.56 }
+    }
+    frozen { all: true  }
+    }
+  bodies { 
+    name: Hold5
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.264 z: 2.334 }
+    }
+    frozen { all: true  }
+    }
+  bodies { 
+    name: Hold6
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -1.946 z: 1.142 }
+    }
+    frozen { all: true  }
+    }
+  bodies { 
+    name: Hold7
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.547 z: -0.255 }
+    }
+    frozen { all: true  }
+    }
+  bodies { 
+    name: Hold8
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 1.637 z: -0.387 }
+    }
+    frozen { all: true  }
+    }
+  bodies { 
+    name: Hold9
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.696 z: 0.767 }
+    }
+    frozen { all: true  }
+    }
+  bodies { 
+    name: Hold10
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.416 z: -0.441 }
+    }
+    frozen { all: true  }
+    }
   joints {
     name: "stalin"
     parent: "wall"
-    child: "hold1"
+    child: "Hold1"
   }
   joints {
     name: "goebbels"
     parent: "wall"
-    child: "hold2"
+    child: "Hold2"
   }
   joints {
     name: "voldemort"
     parent: "wall"
-    child: "hold3"
+    child: "Hold3"
   }
   joints {
     name: "penis"
     parent: "wall"
-    child: "hold4"
+    child: "Hold4"
+  }
+  joints {
+    name: "penis5"
+    parent: "wall"
+    child: "Hold5"
+  }
+  joints {
+    name: "penis6"
+    parent: "wall"
+    child: "Hold6"
+  }
+  joints {
+    name: "penis7"
+    parent: "wall"
+    child: "Hold7"
+  }
+  joints {
+    name: "penis8"
+    parent: "wall"
+    child: "Hold8"
+  }
+  joints {
+    name: "penis9"
+    parent: "wall"
+    child: "Hold9"
+  }
+  joints {
+    name: "penis10"
+    parent: "wall"
+    child: "Hold10"
   }
   joints {
     name: "abdomen_yz"
