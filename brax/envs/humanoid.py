@@ -673,9 +673,9 @@ _SYSTEM_CONFIG = """
   bodies {
     name: "target"
     colliders { sphere { radius: 2 }
-    position {x: 5
-              y: 5
-              z: 5}}
+    position {x: 0.95
+              y: 0
+              z: 2}}
     frozen { all: true }
   }
   bodies {
