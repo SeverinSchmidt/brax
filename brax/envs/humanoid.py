@@ -712,6 +712,24 @@ _SYSTEM_CONFIG = """
     }         
     frozen { all: true }
   }
+   bodies {
+    name: "hold3"
+    colliders { sphere { radius: 0.15 }
+    position {x: 0.9
+              y: 0
+              z: -1}
+    }         
+    frozen { all: true }
+  }
+   bodies {
+    name: "hold4"
+    colliders { sphere { radius: 0.15 }
+    position {x: 0.9
+              y: 0
+              z: 0}
+    }         
+    frozen { all: true }
+  }
   joints {
     name: "stalin"
     parent: "wall"
@@ -721,6 +739,16 @@ _SYSTEM_CONFIG = """
     name: "goebbels"
     parent: "wall"
     child: "hold2"
+  }
+  joints {
+    name: "voldemort"
+    parent: "wall"
+    child: "hold3"
+  }
+  joints {
+    name: "penis"
+    parent: "wall"
+    child: "hold4"
   }
   joints {
     name: "abdomen_yz"
