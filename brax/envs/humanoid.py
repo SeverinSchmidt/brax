@@ -1152,7 +1152,7 @@ _SYSTEM_CONFIG = """
   }
   angular_damping: -0.05
   dt: 0.015
-  substeps: 8
+  substeps: 24
   dynamics_mode: "pbd"
   """
 
