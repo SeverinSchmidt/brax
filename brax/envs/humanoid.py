@@ -981,56 +981,7 @@ _SYSTEM_CONFIG = """
     }
     angular_damping: 30.0
   }
-  joints {
-    name: "stalin"
-    parent: "wall"
-    child: "Hold1"
-  }
-  joints {
-    name: "goebbels"
-    parent: "wall"
-    child: "Hold2"
-  }
-  joints {
-    name: "voldemort"
-    parent: "wall"
-    child: "Hold3"
-  }
-  joints {
-    name: "penis"
-    parent: "wall"
-    child: "Hold4"
-  }
-  joints {
-    name: "penis5"
-    parent: "wall"
-    child: "Hold5"
-  }
-  joints {
-    name: "penis6"
-    parent: "wall"
-    child: "Hold6"
-  }
-  joints {
-    name: "penis7"
-    parent: "wall"
-    child: "Hold7"
-  }
-  joints {
-    name: "penis8"
-    parent: "wall"
-    child: "Hold8"
-  }
-  joints {
-    name: "penis9"
-    parent: "wall"
-    child: "Hold9"
-  }
-  joints {
-    name: "penis10"
-    parent: "wall"
-    child: "Hold10"
-  }
+
   actuators {
     name: "abdomen_yz"
     joint: "abdomen_yz"
