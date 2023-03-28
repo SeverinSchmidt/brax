@@ -670,14 +670,7 @@ _SYSTEM_CONFIG = """
     mass: 1.0
     frozen { all: true }
   }
-  bodies {
-    name: "target"
-    colliders { sphere { radius: 2 }
-    position {x: 5
-              y: 5
-              z: 5}}
-    frozen { all: true }
-  }
+ 
   bodies {
     name: "wall"
     colliders {
