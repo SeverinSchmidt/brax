@@ -757,6 +757,21 @@ _SYSTEM_CONFIG = """
     }
     frozen { all: true  }
     }
+  bodies {
+    name: "Mesh" mass: 1
+    colliders { mesh { name: "pyramid" scale: 1}
+    position { x: -2 y: 0 z: 0}}
+    }
+    
+  mesh_geometries {
+    name: "pyramid"
+    vertices { x: -0.5 y: -0.5 z: 0 }
+    vertices { x: +0.5 y: -0.5 z: 0 }
+    vertices { x: +0.5 y: +0.5 z: 0 }
+    vertices { x: -0.5 y: +0.5 z: 0 }
+    vertices { x: 0 y: 0 z: 1.0 }
+    faces: [0, 2, 1, 0, 3, 2, 0, 4, 3, 0, 1, 4, 1, 2, 4, 2, 3, 4]
+  }
   
   joints {
     name: "abdomen_yz"
