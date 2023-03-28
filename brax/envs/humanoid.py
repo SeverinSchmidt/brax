@@ -1150,9 +1150,9 @@ _SYSTEM_CONFIG = """
   gravity {
     z: -9.81
   }
-  angular_damping: -0.05
-  dt: 0.01
-  substeps: 100
+  angular_damping: 0.05
+  dt: 0.1
+  substeps: 200
   dynamics_mode: "pbd"
   """
 
