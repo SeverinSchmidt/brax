@@ -670,54 +670,6 @@ _SYSTEM_CONFIG = """
     mass: 1.0
     frozen { all: true }
   }
- 
-  bodies {
-    name: "wall"
-    colliders {
-      box {
-        halfsize { x: 2 y: 0.1 z: 3 }
-      }
-    position {x: 1
-              y: 0
-              z: 0}
-    rotation {x: 0
-              y: 0
-              z: 90}
-    }
-  
-    colliders { sphere { radius: 0.1 }
-    position{x: 0.8 y: -1.018 z: -0.226 }
-    }
-    colliders { sphere { radius: 0.1 }
-    position{x: 0.8 y: 0.553 z: 1.531 }
-    }
-    colliders { sphere { radius: 0.1 }
-    position{x: 0.8 y: -0.113 z: -0.894 }
-    }
-    colliders { sphere { radius: 0.1 }
-    position{x: 0.8 y: -1.907 z: -2.56 }
-    }
-    colliders { sphere { radius: 0.1 }
-    position{x: 0.8 y: 0.264 z: 2.334 }
-    }
-    colliders { sphere { radius: 0.1 }
-    position{x: 0.8 y: -1.946 z: 1.142 }
-    }
-    colliders { sphere { radius: 0.1 }
-    position{x: 0.8 y: 0.547 z: -0.255 }
-    }
-    colliders { sphere { radius: 0.1 }
-    position{x: 0.8 y: 1.637 z: -0.387 }
-    }
-    colliders { sphere { radius: 0.1 }
-    position{x: 0.8 y: -0.696 z: 0.767 }
-    }
-    colliders { sphere { radius: 0.1 }
-    position{x: 0.8 y: -0.416 z: -0.441 }
-    }
-    mass: 1.0
-    frozen { all: true }
-  }
     
   bodies {
     name: "Mesh" mass: 1
