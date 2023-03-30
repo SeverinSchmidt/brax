@@ -676,10 +676,11 @@ _SYSTEM_CONFIG = """
     name: "Mesh" mass: 1
     colliders { mesh { name: "pyramid" scale: 1}
     position { x: -2 y: 0 z: 0}}
+    frozen { all: true }
     }
     
   bodies {
-    name: "stairs3" mass: 1
+    name: "stairs" mass: 1
     colliders { mesh {name: "staircase" scale: 0.25}
     position { x: 0.5 y: 0 z: 0}}
     frozen {all: true}
@@ -1039,22 +1040,22 @@ mesh_geometries {
   }
   collide_include {
     first: "floor"
-    second: "wall"
+    second: "stairs"
   }
   collide_include {
-    first: "wall"
+    first: "stairs"
     second: "right_shin"
   }
   collide_include {
-    first: "wall"
+    first: "stairs"
     second: "left_shin"
   }
   collide_include {
-    first: "wall"
+    first: "stairs"
     second: "right_lower_arm"
   }
   collide_include {
-    first: "wall"
+    first: "stairs"
     second: "left_lower_arm"
   }
   defaults {
