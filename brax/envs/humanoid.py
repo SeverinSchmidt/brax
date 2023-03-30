@@ -206,7 +206,6 @@ class Humanoid(env.Env):
                reset_noise_scale=1e-2,
                exclude_current_positions_from_observation=True,
                legacy_spring=False,
-               resource_paths = 'brax/envs/STLmodels',
                **kwargs):
     config = _SYSTEM_CONFIG_SPRING if legacy_spring else _SYSTEM_CONFIG
     super().__init__(config=config, **kwargs)
@@ -221,7 +220,6 @@ class Humanoid(env.Env):
     self._exclude_current_positions_from_observation = (
         exclude_current_positions_from_observation
     )
-    self._resource_paths = resource_paths
 
   def reset(self, rng: jp.ndarray) -> env.State:
     """Resets the environment to an initial state."""
@@ -744,7 +742,7 @@ _SYSTEM_CONFIG = """
 
 mesh_geometries {
   name: "staircase"
-  path: "brax/envs/STLmodels/staircase.stl"
+  path: "staircase.stl"
 }
   
   joints {
