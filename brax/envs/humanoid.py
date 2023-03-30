@@ -687,6 +687,23 @@ _SYSTEM_CONFIG = """
     faces: [0, 2, 1, 0, 3, 2, 0, 4, 3, 0, 1, 4, 1, 2, 4, 2, 3, 4]
   }
   
+  mesh_geometries {
+    name: "staircase"
+    vertices { x: 0 y: 0 z: 0 }
+    vertices { x: 1 y: 0 z: 0 }
+    vertices { x: 1 y: 1 z: 0 }
+    vertices { x: 0 y: 1 z: 0 }
+    vertices { x: 0 y: 0 z: 1 }
+    vertices { x: 1 y: 0 z: 1 }
+    vertices { x: 1 y: 1 z: 1 }
+    vertices { x: 0 y: 1 z: 1 }
+    vertices { x: 2 y: 0 z: 0 }
+    vertices { x: 2 y: 1 z: 0 }
+    vertices { x: 2 y: 1 z: 1 }
+    vertices { x: 2 y: 0 z: 1 }
+    faces: [0, 3, 2, 1, 0, 1, 5, 4, 0, 4, 7, 3, 1, 2, 6, 5, 2, 3, 7, 6, 1, 5, 6, 7, 0, 2, 9, 8, 2, 6, 11, 9, 6, 5, 10, 11, 5, 1, 8, 10, 1, 0, 7, 8, 3, 9, 11, 10]
+}
+  
   joints {
     name: "abdomen_yz"
     parent: "torso"
