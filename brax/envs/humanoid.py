@@ -684,79 +684,41 @@ _SYSTEM_CONFIG = """
               y: 0
               z: 90}
     }
-    mass: 1.0
-    frozen { all: true }
-  }
-  bodies { 
-    name: "Hold1"
+  
     colliders { sphere { radius: 0.1 }
     position{x: 0.8 y: -1.018 z: -0.226 }
     }
-    frozen { all: true  }
-    }
-  bodies { 
-    name: "Hold2"
     colliders { sphere { radius: 0.1 }
     position{x: 0.8 y: 0.553 z: 1.531 }
     }
-    frozen { all: true  }
-    }
-  bodies { 
-    name: "Hold3"
     colliders { sphere { radius: 0.1 }
     position{x: 0.8 y: -0.113 z: -0.894 }
     }
-    frozen { all: true  }
-    }
-  bodies { 
-    name: "Hold4"
     colliders { sphere { radius: 0.1 }
     position{x: 0.8 y: -1.907 z: -2.56 }
     }
-    frozen { all: true  }
-    }
-  bodies { 
-    name: "Hold5"
     colliders { sphere { radius: 0.1 }
     position{x: 0.8 y: 0.264 z: 2.334 }
     }
-    frozen { all: true  }
-    }
-  bodies { 
-    name: "Hold6"
     colliders { sphere { radius: 0.1 }
     position{x: 0.8 y: -1.946 z: 1.142 }
     }
-    frozen { all: true  }
-    }
-  bodies { 
-    name: "Hold7"
     colliders { sphere { radius: 0.1 }
     position{x: 0.8 y: 0.547 z: -0.255 }
     }
-    frozen { all: true  }
-    }
-  bodies { 
-    name: "Hold8"
     colliders { sphere { radius: 0.1 }
     position{x: 0.8 y: 1.637 z: -0.387 }
     }
-    frozen { all: true  }
-    }
-  bodies { 
-    name: "Hold9"
     colliders { sphere { radius: 0.1 }
     position{x: 0.8 y: -0.696 z: 0.767 }
     }
-    frozen { all: true  }
-    }
-  bodies { 
-    name: "Hold10"
     colliders { sphere { radius: 0.1 }
     position{x: 0.8 y: -0.416 z: -0.441 }
     }
-    frozen { all: true  }
-    }
+    mass: 1.0
+    frozen { all: true }
+  }
+    
   bodies {
     name: "Mesh" mass: 1
     colliders { mesh { name: "pyramid" scale: 1}
