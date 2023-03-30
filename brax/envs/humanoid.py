@@ -718,18 +718,18 @@ _SYSTEM_CONFIG = """
 
 
   mesh_geometries {
-    name: "staircase2",
-    vertices { x: 0, y: 0, z: 0 },
-    vertices { x: 1, y: 0, z: 0 },
-    vertices { x: 1, y: 1, z: 0 },
-    vertices { x: 0, y: 1, z: 0 },
-    vertices { x: 0, y: 1, z: 1 },
-    vertices { x: 1, y: 1, z: 1 },
-    vertices { x: 1, y: 2, z: 1 },
-    vertices { x: 0, y: 2, z: 1 },
-    vertices { x: 0, y: 2, z: 2 },
-    vertices { x: 1, y: 2, z: 2 },
-    vertices { x: 1, y: 3, z: 2 },
+    name: "staircase2"
+    vertices { x: 0, y: 0, z: 0 }
+    vertices { x: 1, y: 0, z: 0 }
+    vertices { x: 1, y: 1, z: 0 }
+    vertices { x: 0, y: 1, z: 0 }
+    vertices { x: 0, y: 1, z: 1 }
+    vertices { x: 1, y: 1, z: 1 }
+    vertices { x: 1, y: 2, z: 1 }
+    vertices { x: 0, y: 2, z: 1 }
+    vertices { x: 0, y: 2, z: 2 }
+    vertices { x: 1, y: 2, z: 2 }
+    vertices { x: 1, y: 3, z: 2 }
     vertices { x: 0, y: 3, z: 2 }
     faces: [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11]
 }
