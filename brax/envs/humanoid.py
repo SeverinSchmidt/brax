@@ -677,6 +677,12 @@ _SYSTEM_CONFIG = """
     position { x: -2 y: 0 z: 0}}
     }
     
+  bodies {
+    name: "Stairs" mass: 1
+    colliders { mesh { name: "staircase" scale: 1}
+    position { x: 0.5 y: 0 z: 0}}
+    }
+    
   mesh_geometries {
     name: "pyramid"
     vertices { x: -0.5 y: -0.5 z: 0 }
