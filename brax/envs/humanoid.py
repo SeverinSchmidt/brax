@@ -202,7 +202,7 @@ class Humanoid(env.Env):
                ctrl_cost_weight=0.1,
                healthy_reward=5.0,
                terminate_when_unhealthy=True,
-               healthy_z_range=(0.8, 2.1),
+               healthy_z_range=(0, 100),
                reset_noise_scale=1e-2,
                exclude_current_positions_from_observation=True,
                legacy_spring=False,
