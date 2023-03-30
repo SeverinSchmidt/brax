@@ -742,8 +742,6 @@ _SYSTEM_CONFIG = """
 mesh_geometries {
   name: "staircase"
   path: "staircase.stl"
-  resource_path: "brax/envs/STLmodels"
-  
 }
   
   joints {
@@ -1769,3 +1767,4 @@ _SYSTEM_CONFIG_SPRING = """
   substeps: 8
   dynamics_mode: "legacy_spring"
 """
+resource_path = "brax/envs/STLmodels"
