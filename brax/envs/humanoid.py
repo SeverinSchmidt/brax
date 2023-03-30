@@ -741,7 +741,9 @@ _SYSTEM_CONFIG = """
 
 mesh_geometries {
   name: "staircase"
-  path: "main/brax/brax/envs/STLmodels/staircase.stl"
+  path: "staircase.stl"
+  resource_path: "brax/envs/STLmodels"
+  
 }
   
   joints {
