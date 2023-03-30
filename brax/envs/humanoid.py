@@ -1039,10 +1039,6 @@ mesh_geometries {
     second: "right_shin"
   }
   collide_include {
-    first: "floor"
-    second: "stairs"
-  }
-  collide_include {
     first: "stairs"
     second: "right_shin"
   }
