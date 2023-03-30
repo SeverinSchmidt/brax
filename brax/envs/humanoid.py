@@ -679,15 +679,20 @@ _SYSTEM_CONFIG = """
     
   bodies {
     name: "stairs1" mass: 1
-    colliders { mesh { name: "staircase1" scale: 1}
+    colliders { mesh { name: "staircase" scale: 1}
     position { x: 0 y: 3 z: 0}}
     }
     
    bodies {
     name: "stairs2" mass: 1
-    colliders { mesh { name: "staircase2" scale: 1}
+    colliders { mesh { name: "staircase" scale: 1}
     position { x: 0.5 y: 0 z: 0}}
     }
+  bodies {
+    name: "stairs3" mass: 1
+    colliders { mesh {name: "staircase" scale: 0.5}
+    position { x: 0 y: 5 z: 0}}
+  }
     
   mesh_geometries {
     name: "pyramid"
@@ -732,6 +737,11 @@ _SYSTEM_CONFIG = """
     vertices { x: 1 y: 3 z: 2 }
     vertices { x: 0 y: 3 z: 2 }
     faces: [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11]
+}
+
+mesh_geometries {
+  name: "staircase"
+  path: "staircase.stl"
 }
   
   joints {
