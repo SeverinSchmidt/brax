@@ -679,20 +679,10 @@ _SYSTEM_CONFIG = """
     }
     
   bodies {
-    name: "stairs1" mass: 1
-    colliders { mesh { name: "staircase" scale: 1}
-    position { x: 0 y: 3 z: 0}}
-    }
-    
-   bodies {
-    name: "stairs2" mass: 1
-    colliders { mesh { name: "staircase" scale: 1}
-    position { x: 0.5 y: 0 z: 0}}
-    }
-  bodies {
     name: "stairs3" mass: 1
-    colliders { mesh {name: "staircase" scale: 0.5}
-    position { x: 0 y: 5 z: 0}}
+    colliders { mesh {name: "staircase" scale: 0.25}
+    position { x: 0.5 y: 0 z: 0}}
+    frozen {all: true}
   }
     
   mesh_geometries {
