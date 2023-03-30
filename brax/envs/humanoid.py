@@ -679,13 +679,13 @@ _SYSTEM_CONFIG = """
     
   bodies {
     name: "stairs1" mass: 1
-    colliders { mesh { name: "staircase" scale: 1}
+    colliders { mesh { name: "staircase1" scale: 1}
     position { x: 0 y: 3 z: 0}}
     }
     
    bodies {
     name: "stairs2" mass: 1
-    colliders { mesh { name: "staircase" scale: 1}
+    colliders { mesh { name: "staircase2" scale: 1}
     position { x: 0.5 y: 0 z: 0}}
     }
     
