@@ -206,9 +206,11 @@ class Humanoid(env.Env):
                reset_noise_scale=1e-2,
                exclude_current_positions_from_observation=True,
                legacy_spring=False,
+               resource_path = 'brax/envs/STLmodels',
                **kwargs):
     config = _SYSTEM_CONFIG_SPRING if legacy_spring else _SYSTEM_CONFIG
     super().__init__(config=config, **kwargs)
+    
 
     self._forward_reward_weight = forward_reward_weight
     self._ctrl_cost_weight = ctrl_cost_weight
@@ -219,6 +221,7 @@ class Humanoid(env.Env):
     self._exclude_current_positions_from_observation = (
         exclude_current_positions_from_observation
     )
+    self._resource_path = resource_path
 
   def reset(self, rng: jp.ndarray) -> env.State:
     """Resets the environment to an initial state."""
@@ -1767,4 +1770,3 @@ _SYSTEM_CONFIG_SPRING = """
   substeps: 8
   dynamics_mode: "legacy_spring"
 """
-resource_path = "brax/envs/STLmodels"
