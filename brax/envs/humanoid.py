@@ -251,7 +251,7 @@ class Humanoid(env.Env):
     com_before = self._center_of_mass(state.qp)
     com_after = self._center_of_mass(qp)
     velocity = (com_after - com_before) / self.sys.config.dt
-    forward_reward = self._forward_reward_weight * velocity[0]
+    forward_reward = self._forward_reward_weight * velocity[2]
 
     min_z, max_z = self._healthy_z_range
     is_healthy = jp.where(qp.pos[0, 2] < min_z, x=0.0, y=1.0)
