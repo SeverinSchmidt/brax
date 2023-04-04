@@ -1054,6 +1054,18 @@ mesh_geometries {
     first: "stairs"
     second: "left_lower_arm"
   }
+  collide_include {
+    first: "stairs"
+    second: "torso"
+  }
+  collide_include {
+    first: "stairs"
+    second: "right_thigh"
+  }
+  collide_include {
+    first: "stairs"
+    second: "left_thigh"
+  }
   defaults {
     angles {
       name: "left_knee"
