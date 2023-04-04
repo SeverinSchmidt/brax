@@ -681,8 +681,8 @@ _SYSTEM_CONFIG = """
     
   bodies {
     name: "stairs" mass: 1
-    colliders { mesh {name: "staircase" scale: 0.2}
-    position { x: 0.25 y: 0 z: 0}}
+    colliders { mesh {name: "staircase" scale: 0.18}
+    position { x: 0.22 y: 0 z: 0}}
     frozen {all: true}
   }
     
