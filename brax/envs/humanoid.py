@@ -202,7 +202,7 @@ class Humanoid(env.Env):
                ctrl_cost_weight=0.1,
                healthy_reward=5.0,
                terminate_when_unhealthy=True,
-               healthy_z_range=(0, 100),
+               healthy_z_range=(0.4, 100),
                reset_noise_scale=1e-2,
                exclude_current_positions_from_observation=True,
                legacy_spring=False,
@@ -681,7 +681,7 @@ _SYSTEM_CONFIG = """
     
   bodies {
     name: "stairs" mass: 1
-    colliders { mesh {name: "staircase" scale: 0.25}
+    colliders { mesh {name: "staircase" scale: 0.2}
     position { x: 0.25 y: 0 z: 0}}
     frozen {all: true}
   }
