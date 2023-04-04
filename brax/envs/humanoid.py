@@ -336,7 +336,7 @@ class Humanoid(env.Env):
 
   def _center_of_mass(self, qp):
     mass, pos = self.sys.body.mass[:11], qp.pos[:11]
-    return jp.sum(jp.vmap(jp.multiply)(mass, pos), axis=2) / jp.sum(mass)
+    return jp.sum(jp.vmap(jp.multiply)(mass, pos), axis=0) / jp.sum(mass)
 
   def _noise(self, rng):
     low, hi = -self._reset_noise_scale, self._reset_noise_scale
