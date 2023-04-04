@@ -298,7 +298,7 @@ class Humanoid(env.Env):
 
     # center of mass obs:
     com = self._center_of_mass(qp)
-    mass_sum = jp.sum(self.sys.body.mass[:-1])
+    mass_sum = jp.sum(self.sys.body.mass[:11])
 
     def com_vals(body, qp):
       d = qp.pos - com
@@ -310,8 +310,8 @@ class Humanoid(env.Env):
       return com_inr, com_vel, com_ang
 
     com_inr, com_vel, com_ang = jp.vmap(com_vals)(self.sys.body, qp)
-    cinert = [com_inr[:-1].ravel()]
-    cvel = [com_vel[:-1].ravel(), com_ang[:-1].ravel()]
+    cinert = [com_inr[:11].ravel()]
+    cvel = [com_vel[:11].ravel(), com_ang[:11].ravel()]
 
     # actuator forces
     qfrc_actuator = []
@@ -335,7 +335,7 @@ class Humanoid(env.Env):
     return jp.concatenate(qpos + qvel + cinert + cvel + qfrc_actuator)
 
   def _center_of_mass(self, qp):
-    mass, pos = self.sys.body.mass[:-1], qp.pos[:-1]
+    mass, pos = self.sys.body.mass[:11], qp.pos[:11]
     return jp.sum(jp.vmap(jp.multiply)(mass, pos), axis=0) / jp.sum(mass)
 
   def _noise(self, rng):
