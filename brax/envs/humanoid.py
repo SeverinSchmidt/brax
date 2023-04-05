@@ -262,7 +262,7 @@ class Humanoid(env.Env):
     else:
       healthy_reward = self._healthy_reward * is_healthy
 
-    #ctrl_cost = self._ctrl_cost_weight * jp.sum(jp.square(action))
+    ctrl_cost = self._ctrl_cost_weight * jp.sum(jp.square(action))
     arm_reward = 0.5 * jp.sum(jp.square(action[11:]))
 
     obs = self._get_obs(qp, info, action)
