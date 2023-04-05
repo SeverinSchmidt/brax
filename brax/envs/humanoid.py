@@ -264,7 +264,8 @@ class Humanoid(env.Env):
     ctrl_cost = self._ctrl_cost_weight * jp.sum(jp.square(action))
 
     obs = self._get_obs(qp, info, action)
-    reward = forward_reward + healthy_reward - ctrl_cost
+    # reward = forward_reward + healthy_reward - ctrl_cost
+    reward = forward_reward
     done = 1.0 - is_healthy if self._terminate_when_unhealthy else 0.0
     state.metrics.update(
         forward_reward=forward_reward,
