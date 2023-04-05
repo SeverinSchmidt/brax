@@ -242,6 +242,7 @@ class Humanoid(env.Env):
         'x_velocity': zero,
         'y_velocity': zero,
         'arm_reward': zero,
+        'knee_reward': zero,
     }
     return env.State(qp, obs, reward, done, metrics)
 
@@ -264,10 +265,11 @@ class Humanoid(env.Env):
 
     ctrl_cost = self._ctrl_cost_weight * jp.sum(jp.square(action))
     arm_reward = 0.5 * jp.sum(jp.square(action[11:]))
+    knee_reward = 0.4 * jp.sum(jp.square(action[6])) + 0.4 * jp.sum(jp.square(action[10])) 
 
     obs = self._get_obs(qp, info, action)
     # reward = forward_reward + healthy_reward - ctrl_cost
-    reward = forward_reward + arm_reward
+    reward = forward_reward + arm_reward + knee_reward
     done = 1.0 - is_healthy if self._terminate_when_unhealthy else 0.0
     state.metrics.update(
         forward_reward=forward_reward,
@@ -280,6 +282,7 @@ class Humanoid(env.Env):
         x_velocity=velocity[0],
         y_velocity=velocity[1],
         arm_reward=arm_reward,
+        knee_reward=knee_reward,
     )
 
     return state.replace(qp=qp, obs=obs, reward=reward, done=done)
