@@ -220,6 +220,8 @@ class Humanoid(env.Env):
     self._exclude_current_positions_from_observation = (
         exclude_current_positions_from_observation
     )
+    self.target_idx = self.sys.body.index['Target']
+    self.torso_idx = self.sys.body.index['Torso']
 
   def reset(self, rng: jp.ndarray) -> env.State:
     """Resets the environment to an initial state."""
@@ -268,10 +270,17 @@ class Humanoid(env.Env):
     ctrl_cost = self._ctrl_cost_weight * jp.sum(jp.square(action))
     arm_reward = 0.5 * jp.sum(jp.square(action[11:]))
     knee_reward = 0.5 * jp.sum(jp.square(action[6])) + 0.5 * jp.sum(jp.square(action[10])) 
-
+    
+    # small reward for torso moving towards target
+    torso_delta = qp.pos[self.torso_idx] - state.qp.pos[self.torso_idx]
+    target_rel = qp.pos[self.target_idx] - qp.pos[self.torso_idx]
+    target_dist = jp.norm(target_rel)
+    target_dir = target_rel / (1e-6 + target_dist)
+    moving_to_target = .5 * jp.dot(torso_delta, target_dir)
+    
     obs = self._get_obs(qp, info, action)
     # reward = forward_reward + healthy_reward - ctrl_cost
-    reward = forward_reward + arm_reward + knee_reward + upward_reward
+    reward = arm_reward + knee_reward + moving_to_target
     done = 1.0 - is_healthy if self._terminate_when_unhealthy else 0.0
     state.metrics.update(
         forward_reward=forward_reward,
