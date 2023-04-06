@@ -695,6 +695,13 @@ _SYSTEM_CONFIG = """
     position { x: 0.22 y: 0 z: 0}}
     frozen {all: true}
   }
+  
+  bodies {
+    name: 'Target'
+    colliders { sphere { radius: 0.1 }
+      position{ x: 4.5 y: 0 z: 3.6 }
+    }
+  }
     
   mesh_geometries {
     name: "pyramid"
