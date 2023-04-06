@@ -243,6 +243,7 @@ class Humanoid(env.Env):
         'y_velocity': zero,
         'arm_reward': zero,
         'knee_reward': zero,
+        'upward_reward': zero,
     }
     return env.State(qp, obs, reward, done, metrics)
 
@@ -253,7 +254,8 @@ class Humanoid(env.Env):
     com_before = self._center_of_mass(state.qp)
     com_after = self._center_of_mass(qp)
     velocity = (com_after - com_before) / self.sys.config.dt
-    forward_reward = self._forward_reward_weight * velocity[0] + 5.0 * velocity[2]
+    forward_reward = self._forward_reward_weight * velocity[0] 
+    upward_reward = 10 * velocity[2]
 
     min_z, max_z = self._healthy_z_range
     is_healthy = jp.where(qp.pos[0, 2] < min_z, x=0.0, y=1.0)
@@ -265,11 +267,11 @@ class Humanoid(env.Env):
 
     ctrl_cost = self._ctrl_cost_weight * jp.sum(jp.square(action))
     arm_reward = 0.5 * jp.sum(jp.square(action[11:]))
-    knee_reward = 0.4 * jp.sum(jp.square(action[6])) + 0.4 * jp.sum(jp.square(action[10])) 
+    knee_reward = 0.5 * jp.sum(jp.square(action[6])) + 0.5 * jp.sum(jp.square(action[10])) 
 
     obs = self._get_obs(qp, info, action)
     # reward = forward_reward + healthy_reward - ctrl_cost
-    reward = forward_reward + arm_reward + knee_reward
+    reward = forward_reward + arm_reward + knee_reward + upward_reward
     done = 1.0 - is_healthy if self._terminate_when_unhealthy else 0.0
     state.metrics.update(
         forward_reward=forward_reward,
@@ -283,6 +285,7 @@ class Humanoid(env.Env):
         y_velocity=velocity[1],
         arm_reward=arm_reward,
         knee_reward=knee_reward,
+        upward_reward=upward_reward,
     )
 
     return state.replace(qp=qp, obs=obs, reward=reward, done=done)
