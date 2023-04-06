@@ -221,7 +221,7 @@ class Humanoid(env.Env):
         exclude_current_positions_from_observation
     )
     self.target_idx = self.sys.body.index['Target']
-    self.torso_idx = self.sys.body.index['Torso']
+    self.torso_idx = self.sys.body.index['torso']
 
   def reset(self, rng: jp.ndarray) -> env.State:
     """Resets the environment to an initial state."""
