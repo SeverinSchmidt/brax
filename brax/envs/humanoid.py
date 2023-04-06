@@ -708,8 +708,9 @@ _SYSTEM_CONFIG = """
   bodies {
     name: 'Target'
     colliders { sphere { radius: 0.1 }
-      position{ x: 4.5 y: 0 z: 3.6 }
+      position{ x: 4.5 y: 0 z: 5 }
     }
+    frozen {all:true}
   }
     
   mesh_geometries {
