@@ -246,6 +246,7 @@ class Humanoid(env.Env):
         'arm_reward': zero,
         'knee_reward': zero,
         'upward_reward': zero,
+        'moving_to_target': zero,
     }
     return env.State(qp, obs, reward, done, metrics)
 
@@ -300,6 +301,7 @@ class Humanoid(env.Env):
         arm_reward=arm_reward,
         knee_reward=knee_reward,
         upward_reward=upward_reward,
+        moving_to_target=moving_to_target,
     )
 
     return state.replace(qp=qp, obs=obs, reward=reward, done=done)
