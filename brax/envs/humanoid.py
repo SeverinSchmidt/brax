@@ -992,6 +992,12 @@ mesh_geometries {
     }
     angular_damping: 30.0
   }
+  
+  joints {
+    name: "yourmother"
+    parent: "stairs"
+    child: "Target"
+  }
 
   actuators {
     name: "abdomen_yz"
