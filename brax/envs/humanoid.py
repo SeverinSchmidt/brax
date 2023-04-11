@@ -272,8 +272,13 @@ class Humanoid(env.Env):
     knee_reward = 0.5 * jp.sum(jp.square(action[6])) + 0.5 * jp.sum(jp.square(action[10])) 
     
     # small reward for torso moving towards target
+#     torso_delta = qp.pos[self.torso_idx] - state.qp.pos[self.torso_idx]
+#     target_rel = qp.pos[self.target_idx] - qp.pos[self.torso_idx]
+#     target_dist = jp.norm(target_rel)
+#     target_dir = target_rel / (1e-6 + target_dist)
+#     moving_to_target = .5 * jp.dot(torso_delta, target_dir)
     torso_delta = qp.pos[self.torso_idx] - state.qp.pos[self.torso_idx]
-    target_rel = qp.pos[self.target_idx] - qp.pos[self.torso_idx]
+    target_rel = jp.array([5.5, 0, 3.7]) - qp.pos[self.torso_idx]
     target_dist = jp.norm(target_rel)
     target_dir = target_rel / (1e-6 + target_dist)
     moving_to_target = .5 * jp.dot(torso_delta, target_dir)
