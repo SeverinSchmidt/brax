@@ -220,7 +220,7 @@ class Humanoid(env.Env):
     self._exclude_current_positions_from_observation = (
         exclude_current_positions_from_observation
     )
-    self.target_idx = self.sys.body.index['Target']
+#     self.target_idx = self.sys.body.index['Target']
     self.torso_idx = self.sys.body.index['torso']
 
   def reset(self, rng: jp.ndarray) -> env.State:
@@ -707,15 +707,9 @@ _SYSTEM_CONFIG = """
     name: "stairs" mass: 500
     colliders { mesh {name: "staircase" scale: 0.18}
     position { x: 0.22 y: 0 z: 0}}
-    frozen {all: true}
-  }
-  
-  bodies {
-    name: 'Target'
+    
     colliders { sphere { radius: 0.1 }
-      position{ x: 5.5 y: 0 z: 3.7 }
-    }
-    mass: 0
+    position{ x: 5.5 y: 0 z: 3.7 }
     frozen {all: true}
   }
     
@@ -991,12 +985,6 @@ mesh_geometries {
       max: 50.0
     }
     angular_damping: 30.0
-  }
-  
-  joints {
-    name: "yourmother"
-    parent: "stairs"
-    child: "Target"
   }
 
   actuators {
