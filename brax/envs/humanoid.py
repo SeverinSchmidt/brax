@@ -710,6 +710,7 @@ _SYSTEM_CONFIG = """
     
     colliders { sphere { radius: 0.1 }
     position{ x: 5.5 y: 0 z: 3.7 }
+    }
     frozen {all: true}
   }
     
