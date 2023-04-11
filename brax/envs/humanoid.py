@@ -277,11 +277,11 @@ class Humanoid(env.Env):
 #     target_dist = jp.norm(target_rel)
 #     target_dir = target_rel / (1e-6 + target_dist)
 #     moving_to_target = .5 * jp.dot(torso_delta, target_dir)
-    torso_delta = qp.pos[self.torso_idx] - state.qp.pos[self.torso_idx]
-    target_rel = jp.array([5.5, 0, 3.7]) - qp.pos[self.torso_idx]
+    torso_delta = com_after - com_before
+    target_rel = jp.array([5.5, 0, 3.7]) - com_after
     target_dist = jp.norm(target_rel)
     target_dir = target_rel / (1e-6 + target_dist)
-    moving_to_target = .5 * jp.dot(torso_delta, target_dir)
+    moving_to_target = .2 * jp.dot(torso_delta, target_dir)
     
     obs = self._get_obs(qp, info, action)
     # reward = forward_reward + healthy_reward - ctrl_cost
