@@ -702,6 +702,11 @@ _SYSTEM_CONFIG = """
     name: "stairs" mass: 500
     colliders { mesh {name: "staircase" scale: 0.18}
     position { x: 0.22 y: 0 z: 0}}
+    
+    colliders { sphere { radius: 0.1 }
+      position{ x: 4.5 y: 0 z: 5 }
+    }
+    
     frozen {all: true}
   }
   
