@@ -234,10 +234,10 @@ class Humanoid(env.Env):
     obs = self._get_obs(qp, self.sys.info(qp), jp.zeros(self.action_size))
     reward, done, zero = jp.zeros(3)
     metrics = {
-        'forward_reward': zero,
-        'reward_linvel': zero,
-        'reward_quadctrl': zero,
-        'reward_alive': zero,
+#         'forward_reward': zero,
+#         'reward_linvel': zero,
+#         'reward_quadctrl': zero,
+#         'reward_alive': zero,
         'x_position': zero,
         'y_position': zero,
         'z_position': zero,
@@ -245,9 +245,9 @@ class Humanoid(env.Env):
         'x_velocity': zero,
         'y_velocity': zero,
         'z_velocity': zero,
-        'arm_reward': zero,
-        'knee_reward': zero,
-        'upward_reward': zero,
+#         'arm_reward': zero,
+#         'knee_reward': zero,
+#         'upward_reward': zero,
         'moving_to_target': zero,
     }
     return env.State(qp, obs, reward, done, metrics)
@@ -271,8 +271,8 @@ class Humanoid(env.Env):
       healthy_reward = self._healthy_reward * is_healthy
 
     ctrl_cost = self._ctrl_cost_weight * jp.sum(jp.square(action))
-    arm_reward = 0.5 * jp.sum(jp.square(action[11:]))
-    knee_reward = 0.5 * jp.sum(jp.square(action[6])) + 0.5 * jp.sum(jp.square(action[10])) 
+#     arm_reward = 0.5 * jp.sum(jp.square(action[11:]))
+#     knee_reward = 0.5 * jp.sum(jp.square(action[6])) + 0.5 * jp.sum(jp.square(action[10])) 
     
     # small reward for torso moving towards target
 #     torso_delta = qp.pos[self.torso_idx] - state.qp.pos[self.torso_idx]
@@ -284,17 +284,17 @@ class Humanoid(env.Env):
     target_rel = jp.array([5.5, 0, 3.7]) - com_after
     target_dist = jp.norm(target_rel)
     target_dir = target_rel / (1e-6 + target_dist)
-    moving_to_target = 10 * jp.dot(torso_delta, target_dir)
+    moving_to_target = 2 * jp.dot(torso_delta, target_dir)
     
     obs = self._get_obs(qp, info, action)
     # reward = forward_reward + healthy_reward - ctrl_cost
-    reward = arm_reward + knee_reward + moving_to_target
+    reward = moving_to_target
     done = 1.0 - is_healthy if self._terminate_when_unhealthy else 0.0
     state.metrics.update(
-        forward_reward=forward_reward,
-        reward_linvel=forward_reward,
-        reward_quadctrl=-ctrl_cost,
-        reward_alive=healthy_reward,
+#         forward_reward=forward_reward,
+#         reward_linvel=forward_reward,
+#         reward_quadctrl=-ctrl_cost,
+#         reward_alive=healthy_reward,
         x_position=com_after[0],
         y_position=com_after[1],
         z_position=com_after[2],
@@ -302,10 +302,10 @@ class Humanoid(env.Env):
         x_velocity=velocity[0],
         y_velocity=velocity[1],
         z_velocity=velocity[2],
-        arm_reward=arm_reward,
-        knee_reward=knee_reward,
-        upward_reward=upward_reward,
+#         upward_reward=upward_reward,
         moving_to_target=moving_to_target,
+#         arm_reward=arm_reward,
+#         knee_reward=knee_reward,
     )
 
     return state.replace(qp=qp, obs=obs, reward=reward, done=done)
