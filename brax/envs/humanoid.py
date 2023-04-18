@@ -222,8 +222,6 @@ class Humanoid(env.Env):
     )
 #     self.target_idx = self.sys.body.index['Target']
     self.torso_idx = self.sys.body.index['torso']
-    
-#     self.radius = 0.4
 
   def reset(self, rng: jp.ndarray) -> env.State:
     """Resets the environment to an initial state."""
@@ -251,7 +249,7 @@ class Humanoid(env.Env):
 #         'knee_reward': zero,
 #         'upward_reward': zero,
         'moving_to_target': zero,
-#         'reached_target': zero,
+        'reached_target': zero,
     }
     return env.State(qp, obs, reward, done, metrics)
 
@@ -291,13 +289,13 @@ class Humanoid(env.Env):
     
    
     #Big reward for reaching target
-#     reached_target = 0
-#     if target_dist < self.radius:
-#       reached_target = 1000
+    reached_target = 0
+    if target_dist < 0.4:
+      reached_target = 1000
     
     obs = self._get_obs(qp, info, action)
     # reward = forward_reward + healthy_reward - ctrl_cost
-    reward = moving_to_target
+    reward = moving_to_target + reached_target
     done = 1.0 - is_healthy if self._terminate_when_unhealthy else 0.0
     state.metrics.update(
 #         forward_reward=forward_reward,
