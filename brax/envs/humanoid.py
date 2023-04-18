@@ -313,7 +313,7 @@ class Humanoid(env.Env):
         z_velocity=velocity[2],
 #         upward_reward=upward_reward,
         moving_to_target=moving_to_target,
-        reached_target = reached_target,
+        reached_target=reached_target,
 #         arm_reward=arm_reward,
 #         knee_reward=knee_reward,
     )
