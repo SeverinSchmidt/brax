@@ -251,6 +251,7 @@ class Humanoid(env.Env):
 #         'knee_reward': zero,
 #         'upward_reward': zero,
         'moving_to_target': zero,
+        'reached_target': zero,
     }
     return env.State(qp, obs, reward, done, metrics)
 
