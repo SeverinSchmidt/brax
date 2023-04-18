@@ -249,7 +249,7 @@ class Humanoid(env.Env):
 #         'knee_reward': zero,
 #         'upward_reward': zero,
         'moving_to_target': zero,
-        'target_reward': zero,
+#         'target_reward': zero,
     }
     return env.State(qp, obs, reward, done, metrics)
 
@@ -289,12 +289,12 @@ class Humanoid(env.Env):
     
    
     #Big reward for reaching target
-    reached_target = target_dist < 0.4
-    target_reward = 1000.0 if reached_target else 0.0
+#     reached_target = target_dist < 0.4
+#     target_reward = 1000.0 if reached_target else 0.0
     
     obs = self._get_obs(qp, info, action)
     # reward = forward_reward + healthy_reward - ctrl_cost
-    reward = moving_to_target + reached_target
+    reward = moving_to_target
     done = 1.0 - is_healthy if self._terminate_when_unhealthy else 0.0
     state.metrics.update(
 #         forward_reward=forward_reward,
@@ -310,7 +310,7 @@ class Humanoid(env.Env):
         z_velocity=velocity[2],
 #         upward_reward=upward_reward,
         moving_to_target=moving_to_target,
-        target_reward=target_reward,
+#         target_reward=target_reward,
 #         arm_reward=arm_reward,
 #         knee_reward=knee_reward,
     )
