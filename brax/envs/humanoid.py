@@ -708,24 +708,19 @@ _SYSTEM_CONFIG = """
     mass: 1.0
     frozen { all: true }
   }
-    
+  
   bodies {
-    name: "Mesh" mass: 1
-    colliders { mesh { name: "pyramid" scale: 1}
-    position { x: -2 y: 0 z: 0}}
-    frozen { all: true }
-    }
-    
-  bodies {
-    name: "stairs" mass: 500
-    colliders { mesh {name: "staircase" scale: 0.18}
+    name: "crack" mass: 100
+    colliders { mesh {name: "crackwall" scale: 0.36}
     position { x: 0.22 y: 0 z: 0}}
     
     colliders { sphere { radius: 0.1 }
-    position{ x: 5.5 y: 0 z: 3.7 }
+    position{ x: 0.3 y: 0 z: 3.7 }
     }
     frozen {all: true}
   }
+    
+  
     
   mesh_geometries {
     name: "pyramid"
@@ -736,46 +731,19 @@ _SYSTEM_CONFIG = """
     vertices { x: 0 y: 0 z: 1.0 }
     faces: [0, 2, 1, 0, 3, 2, 0, 4, 3, 0, 1, 4, 1, 2, 4, 2, 3, 4]
   }
-  
-  mesh_geometries {
-    name: "staircase1"
-    vertices { x: 0 y: 0 z: 0 }
-    vertices { x: 1 y: 0 z: 0 }
-    vertices { x: 1 y: 1 z: 0 }
-    vertices { x: 0 y: 1 z: 0 }
-    vertices { x: 0 y: 0 z: 1 }
-    vertices { x: 1 y: 0 z: 1 }
-    vertices { x: 1 y: 1 z: 1 }
-    vertices { x: 0 y: 1 z: 1 }
-    vertices { x: 2 y: 0 z: 0 }
-    vertices { x: 2 y: 1 z: 0 }
-    vertices { x: 2 y: 1 z: 1 }
-    vertices { x: 2 y: 0 z: 1 }
-    faces: [0, 3, 2, 1, 0, 1, 5, 4, 0, 4, 7, 3, 1, 2, 6, 5, 2, 3, 7, 6, 1, 5, 6, 7, 0, 2, 9, 8, 2, 6, 11, 9, 6, 5, 10, 11, 5, 1, 8, 10, 1, 0, 7, 8, 3, 9, 11, 10]
-}
 
 
-  mesh_geometries {
-    name: "staircase2"
-    vertices { x: 0 y: 0 z: 0 }
-    vertices { x: 1 y: 0 z: 0 }
-    vertices { x: 1 y: 1 z: 0 }
-    vertices { x: 0 y: 1 z: 0 }
-    vertices { x: 0 y: 1 z: 1 }
-    vertices { x: 1 y: 1 z: 1 }
-    vertices { x: 1 y: 2 z: 1 }
-    vertices { x: 0 y: 2 z: 1 }
-    vertices { x: 0 y: 2 z: 2 }
-    vertices { x: 1 y: 2 z: 2 }
-    vertices { x: 1 y: 3 z: 2 }
-    vertices { x: 0 y: 3 z: 2 }
-    faces: [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11]
-}
 
 mesh_geometries {
   name: "staircase"
   path: "staircase.stl"
 }
+
+mesh_geometries {
+  name: "crackwall"
+  path: "crackwall.stl"
+}
+
   
   joints {
     name: "abdomen_yz"
