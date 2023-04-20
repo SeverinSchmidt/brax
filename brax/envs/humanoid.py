@@ -1041,36 +1041,36 @@ mesh_geometries {
     second: "right_shin"
   }
   collide_include {
-    first: "stairs"
+    first: "crack"
     second: "right_shin"
   }
   collide_include {
-    first: "stairs"
+    first: "crack"
     second: "left_shin"
   }
   collide_include {
-    first: "stairs"
+    first: "crack"
     second: "right_lower_arm"
   }
   collide_include {
-    first: "stairs"
+    first: "crack"
     second: "left_lower_arm"
   }
   collide_include {
-    first: "stairs"
+    first: "crack"
     second: "torso"
   }
   collide_include {
-    first: "stairs"
+    first: "crack"
     second: "right_thigh"
   }
   collide_include {
-    first: "stairs"
+    first: "crack"
     second: "left_thigh"
   }
   collide_include {
     first: "Target"
-    second: "stairs"
+    second: "crack"
   }
   collide_include {
     first: "Target"
