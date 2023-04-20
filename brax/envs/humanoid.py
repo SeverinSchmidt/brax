@@ -719,9 +719,11 @@ _SYSTEM_CONFIG = """
   }
   
   bodies {
-    name: "crack" mass: 100
+    name: "crack" mass: 1000
     colliders { mesh {name: "slit_crack" scale: 0.36}
-    position { x: 0.22 y: 0 z: 0}}
+    position { x: 0.22 y: 0 z: 0}
+    material { friction: 1}
+    }
     
     colliders { sphere { radius: 0.1 }
     position{ x: 0.5 y: 0 z: 3.7 }
