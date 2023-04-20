@@ -711,11 +711,11 @@ _SYSTEM_CONFIG = """
   
   bodies {
     name: "crack" mass: 100
-    colliders { mesh {name: "crackwall" scale: 0.36}
+    colliders { mesh {name: "slit_crack" scale: 0.36}
     position { x: 0.22 y: 0 z: 0}}
     
     colliders { sphere { radius: 0.1 }
-    position{ x: 0.3 y: 0 z: 3.7 }
+    position{ x: 0.5 y: 0 z: 3.7 }
     }
     frozen {all: true}
   }
@@ -733,8 +733,8 @@ _SYSTEM_CONFIG = """
   }
 
 mesh_geometries {
-  name: "crackwall"
-  path: "crackwall.stl"
+  name: "slit_crack"
+  path: "slit_crack.stl"
 }
 
   
