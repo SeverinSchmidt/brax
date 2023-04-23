@@ -370,15 +370,15 @@ class Humanoid(env.Env):
     # external contact forces:
     # delta velocity (3,), delta ang (3,) * 10 bodies in the system
     # can be calculated in brax like so:
-    # cfrc = [
-    #     jp.clip(info.contact.vel, -1, 1),
-    #     jp.clip(info.contact.ang, -1, 1)
-    # ]
+    cfrc = [
+        jp.clip(info.contact.vel, -1, 1),
+        jp.clip(info.contact.ang, -1, 1)
+    ]
     # flatten bottom dimension
-    # cfrc = [jp.reshape(x, x.shape[:-2] + (-1,)) for x in cfrc]
+    cfrc = [jp.reshape(x, x.shape[:-2] + (-1,)) for x in cfrc]
     # then add it to the jp.concatenate below
 
-    return jp.concatenate(qpos + qvel + cinert + cvel + qfrc_actuator)
+    return jp.concatenate(qpos + qvel + cinert + cvel + qfrc_actuator + cfrc)
 
   def _center_of_mass(self, qp):
     mass, pos = self.sys.body.mass[:11], qp.pos[:11]
