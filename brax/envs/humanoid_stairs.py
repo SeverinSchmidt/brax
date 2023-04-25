@@ -733,25 +733,7 @@ _SYSTEM_CONFIG = """
   name: "staircase"
   path: "staircase.stl"
   }
-    
-  
-    
-  mesh_geometries {
-    name: "pyramid"
-    vertices { x: -0.5 y: -0.5 z: 0 }
-    vertices { x: +0.5 y: -0.5 z: 0 }
-    vertices { x: +0.5 y: +0.5 z: 0 }
-    vertices { x: -0.5 y: +0.5 z: 0 }
-    vertices { x: 0 y: 0 z: 1.0 }
-    faces: [0, 2, 1, 0, 3, 2, 0, 4, 3, 0, 1, 4, 1, 2, 4, 2, 3, 4]
-  }
 
-mesh_geometries {
-  name: "slit_crack"
-  path: "slit_crack.stl"
-}
-
-  
   joints {
     name: "abdomen_yz"
     parent: "torso"
@@ -1055,19 +1037,19 @@ mesh_geometries {
     second: "right_shin"
   }
   collide_include {
-    first: "crack"
+    first: "stairs"
     second: "right_shin"
   }
   collide_include {
-    first: "crack"
+    first: "stairs"
     second: "left_shin"
   }
   collide_include {
-    first: "crack"
+    first: "stairs"
     second: "right_lower_arm"
   }
   collide_include {
-    first: "crack"
+    first: "stairs"
     second: "left_lower_arm"
   }
   collide_include {
@@ -1075,11 +1057,11 @@ mesh_geometries {
     second: "torso"
   }
   collide_include {
-    first: "crack"
+    first: "stairs"
     second: "right_thigh"
   }
   collide_include {
-    first: "crack"
+    first: "stairs"
     second: "left_thigh"
   }
   collide_include {
