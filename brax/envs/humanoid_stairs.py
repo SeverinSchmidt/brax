@@ -719,16 +719,19 @@ _SYSTEM_CONFIG = """
   }
   
   bodies {
-    name: "crack" mass: 1000
-    colliders { mesh {name: "slit_crack" scale: 0.36}
-    position { x: 0.22 y: 0 z: 0}
-    material { friction: 1}
-    }
+    name: "stairs" mass: 500
+    colliders { mesh {name: "staircase" scale: 0.18}
+    position { x: 0.22 y: 0 z: 0}}
     
     colliders { sphere { radius: 0.1 }
-    position{ x: 0.5 y: 0 z: 3.7 }
+    position{ x: 5.5 y: 0 z: 3.7 }
     }
     frozen {all: true}
+  }
+
+  mesh_geometries {
+  name: "staircase"
+  path: "staircase.stl"
   }
     
   
