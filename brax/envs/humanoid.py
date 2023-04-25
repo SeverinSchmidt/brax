@@ -288,7 +288,7 @@ class Humanoid(env.Env):
 #     target_dir = target_rel / (1e-6 + target_dist)
 #     moving_to_target = 10 * jp.dot(torso_delta, target_dir)
 
-    target = jp.array([0.5, 0, 3.7])
+    target = jp.array([5.5, 0, 3.7])
     target_rel = target-com_after
     target_dist = jp.norm(target_rel)
     start_dist = jp.norm(target)
