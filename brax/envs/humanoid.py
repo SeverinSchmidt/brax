@@ -730,67 +730,83 @@ _SYSTEM_CONFIG = """
               y: 0
               z: 90}
     }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: -1.98 z: -1.779 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 1.141 z: -2.529 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 1.92 z: -2.475 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: -1.919 z: 0.376 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: -1.977 z: -0.675 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 0.454 z: 1.409 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: -0.461 z: 1.447 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: -1.2 z: -0.039 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 1.911 z: 0.619 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 0.687 z: -1.549 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 1.553 z: -0.091 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: -0.978 z: -0.945 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 1.885 z: -1.795 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 1.679 z: 2.623 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 1.736 z: -2.722 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 0.121 z: -2.41 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 0.567 z: 2.65 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 0.785 z: 2.24 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 1.136 z: 1.061 }
-      }
-      colliders { sphere { radius: 0.1 }
-      position{x: 0.9 y: 1.605 z: -2.108 }
-      }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.976 z: 1.095 }
     }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.361 z: -2.643 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.122 z: -2.035 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -1.121 z: -0.669 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 1.466 z: 0.929 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.777 z: 1.468 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.35 z: 1.492 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -1.384 z: -1.486 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.311 z: -1.913 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.549 z: 1.855 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.725 z: 0.783 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.732 z: -0.407 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.173 z: -0.305 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.768 z: 1.908 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 1.227 z: -2.598 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.239 z: 0.203 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.128 z: -2.051 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 1.497 z: -0.095 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.824 z: 2.226 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.632 z: -2.137 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.347 z: -0.289 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.485 z: -0.453 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 1.145 z: 2.339 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.97 z: -1.194 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.585 z: 1.772 }
+    }
+  }
+
 
   
 
