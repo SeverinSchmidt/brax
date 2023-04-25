@@ -1053,7 +1053,7 @@ _SYSTEM_CONFIG = """
     second: "left_lower_arm"
   }
   collide_include {
-    first: "crack"
+    first: "stairs"
     second: "torso"
   }
   collide_include {
@@ -1066,7 +1066,7 @@ _SYSTEM_CONFIG = """
   }
   collide_include {
     first: "Target"
-    second: "crack"
+    second: "stairs"
   }
   collide_include {
     first: "Target"
