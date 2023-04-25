@@ -805,6 +805,15 @@ _SYSTEM_CONFIG = """
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.585 z: 1.772 }
     }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0.15 z: -1 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: -0.15 z: -1 }
+    }
+    colliders { sphere { radius: 0.1 }
+    position{x: 0.9 y: 0 z: 2.85 }
+	  }
   }
 
 
