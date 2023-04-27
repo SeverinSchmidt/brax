@@ -39,6 +39,7 @@ from brax.envs import wrappers
 from brax.envs import humanoid_lidar
 from brax.envs import humanoid_wall
 from brax.envs import humanoid_stairs
+from brax.envs import humanoid_crack
 from brax.envs.env import Env, State, Wrapper
 import gym
 
