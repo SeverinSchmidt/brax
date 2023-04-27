@@ -729,95 +729,121 @@ _SYSTEM_CONFIG = """
      rotation {x: 0
               y: 0
               z: 90}
-    }
+    }   
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.976 z: 1.095 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.361 z: -2.643 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.122 z: -2.035 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -1.121 z: -0.669 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 1.466 z: 0.929 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.777 z: 1.468 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.35 z: 1.492 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -1.384 z: -1.486 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.311 z: -1.913 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.549 z: 1.855 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.725 z: 0.783 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.732 z: -0.407 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.173 z: -0.305 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.768 z: 1.908 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 1.227 z: -2.598 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.239 z: 0.203 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.128 z: -2.051 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 1.497 z: -0.095 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.824 z: 2.226 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.632 z: -2.137 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.347 z: -0.289 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.485 z: -0.453 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 1.145 z: 2.339 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.97 z: -1.194 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.585 z: 1.772 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0.15 z: -1 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: -0.15 z: -1 }
+    material { friction: 1}
     }
     colliders { sphere { radius: 0.1 }
     position{x: 0.9 y: 0 z: 2.85 }
+    material { friction: 1}
 	  }
   }
 
-
-  
 
   joints {
     name: "abdomen_yz"
