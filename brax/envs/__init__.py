@@ -38,6 +38,7 @@ from brax.envs import walker2d
 from brax.envs import wrappers
 from brax.envs import humanoid_lidar
 from brax.envs import humanoid_wall
+from brax.envs import humanoid_stairs
 from brax.envs.env import Env, State, Wrapper
 import gym
 
@@ -62,6 +63,8 @@ _envs = {
     'walker2d': walker2d.Walker2d,
     'humanoid_lidar': humanoid_lidar.Humanoid,
     'humanoid_wall': humanoid_wall.Humanoid,
+    'humanoid_stairs': humanoid_stairs.Humanoid,
+    'humanoid_crack': humanoid_crack.Humanoid,
 }
 
 
