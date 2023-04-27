@@ -733,7 +733,7 @@ _SYSTEM_CONFIG = """
 
 mesh_geometries {
   name: "lidar_wall"
-  path: "turbo_decimated_wall.stl"
+  path: "turbo_decimated_wall_scaled.stl"
 }
 
   
