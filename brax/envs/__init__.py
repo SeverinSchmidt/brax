@@ -36,6 +36,7 @@ from brax.envs import swimmer
 from brax.envs import ur5e
 from brax.envs import walker2d
 from brax.envs import wrappers
+from brax.envs import humanoid_lidar
 from brax.envs.env import Env, State, Wrapper
 import gym
 
@@ -58,6 +59,7 @@ _envs = {
     'swimmer': swimmer.Swimmer,
     'ur5e': ur5e.Ur5e,
     'walker2d': walker2d.Walker2d,
+    'humanoid_lidar': humanoid_lidar.Humanoid,
 }
 
 
