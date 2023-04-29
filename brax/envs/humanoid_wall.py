@@ -1175,14 +1175,6 @@ _SYSTEM_CONFIG = """
     first: "wall"
     second: "left_thigh"
   }
-  collide_include {
-    first: "Target"
-    second: "wall"
-  }
-  collide_include {
-    first: "Target"
-    second: "floor"
-  }
   defaults {
     angles {
       name: "left_knee"
