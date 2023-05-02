@@ -40,6 +40,7 @@ from brax.envs import humanoid_lidar
 from brax.envs import humanoid_wall
 from brax.envs import humanoid_stairs
 from brax.envs import humanoid_crack
+from brax.envs import humanoid_path
 from brax.envs.env import Env, State, Wrapper
 import gym
 
@@ -66,6 +67,8 @@ _envs = {
     'humanoid_wall': humanoid_wall.Humanoid,
     'humanoid_stairs': humanoid_stairs.Humanoid,
     'humanoid_crack': humanoid_crack.Humanoid,
+    'humanoid_path': humanoid_path.Humanoid,
+}
 }
 
 
