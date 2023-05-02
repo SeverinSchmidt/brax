@@ -720,7 +720,7 @@ _SYSTEM_CONFIG = """
   
   bodies {
     name: "stairs" mass: 500
-    colliders { mesh {name: "staircase" scale: 0.18}
+    colliders { mesh {name: "staircase" scale: 0.42}
     position { x: 0.22 y: 0 z: 0}}
     
     colliders { sphere { radius: 0.1 }
