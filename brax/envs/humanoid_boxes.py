@@ -288,7 +288,7 @@ class Humanoid(env.Env):
 #     target_dir = target_rel / (1e-6 + target_dist)
 #     moving_to_target = 10 * jp.dot(torso_delta, target_dir)
 
-    target = jp.array([4.5, -3, 2.2])
+    target = jp.array([7, -6, 4.5])
     target_rel = target-com_after
     target_dist = jp.norm(target_rel)
     start_dist = jp.norm(target)
@@ -721,10 +721,10 @@ _SYSTEM_CONFIG = """
   bodies {
     name: "stairs" mass: 500
     colliders { mesh {name: "staircase" scale: 1}
-    position { x: 0 y: 0 z: 0}}
+    position { x: 0.2 y: 0 z: 0}}
     
     colliders { sphere { radius: 0.1 }
-    position{ x: 4.5 y: -3 z: 2.2 }
+    position{ x: 7 y: -6 z: 4.5 }
     }
     frozen {all: true}
   }
