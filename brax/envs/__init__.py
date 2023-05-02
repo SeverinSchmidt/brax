@@ -69,7 +69,6 @@ _envs = {
     'humanoid_crack': humanoid_crack.Humanoid,
     'humanoid_path': humanoid_path.Humanoid,
 }
-}
 
 
 def get_environment(env_name, **kwargs) -> Env:
