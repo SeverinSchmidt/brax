@@ -288,12 +288,12 @@ class Humanoid(env.Env):
 #     target_dir = target_rel / (1e-6 + target_dist)
 #     moving_to_target = 10 * jp.dot(torso_delta, target_dir)
 
-    target = jp.array([8, -6, 5.5])
+    target = jp.array([8, -6, 2.5])
     target_rel = target-com_after
     target_dist = jp.norm(target_rel)
     start_dist = jp.norm(target)
     distance_moved = start_dist - target_dist
-    moving_to_target = distance_moved**2
+    moving_to_target = distance_moved**3
 
     
    
@@ -724,7 +724,7 @@ _SYSTEM_CONFIG = """
     position { x: 0.3 y: 0 z: 0}}
     
     colliders { sphere { radius: 0.1 }
-    position{ x: 8 y: -6 z: 5.5 }
+    position{ x: 8 y: -6 z: 2.5 }
     }
     frozen {all: true}
   }
