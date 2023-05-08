@@ -720,7 +720,7 @@ _SYSTEM_CONFIG = """
   
   bodies {
     name: "wall" mass: 1000
-    colliders { mesh {name: "lidar_wall" scale: 0.36}
+    colliders { mesh {name: "lidar_stair" scale: 0.36}
     position { x: 0.22 y: 0 z: 0}
     material { friction: 1}
     }
@@ -732,8 +732,8 @@ _SYSTEM_CONFIG = """
   }
 
 mesh_geometries {
-  name: "lidar_wall"
-  path: "turbo_decimated_wall_scaled.stl"
+  name: "lidar_stair"
+  path: "lidarstair_11k.stl"
 }
 
   
