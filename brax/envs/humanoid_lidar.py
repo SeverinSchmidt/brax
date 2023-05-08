@@ -721,11 +721,11 @@ _SYSTEM_CONFIG = """
   bodies {
     name: "wall" mass: 1000
     colliders { mesh {name: "lidar_stair" scale: 1}
-    position { x: 0.22 y: 0.1 z: 0}
+    position { x: 0.22 y: 0.2 z: 0}
     }
     
     colliders { sphere { radius: 0.1 }
-    position{ x: 3 y: -2.5 z: 5 }
+    position{ x: 3.2 y: -3 z: 5 }
     }
     frozen {all: true}
   }
