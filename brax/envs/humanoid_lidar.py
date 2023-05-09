@@ -732,7 +732,7 @@ _SYSTEM_CONFIG = """
 
 mesh_geometries {
   name: "lidar_stair"
-  path: "lidarstair_11k.stl"
+  path: "refined_lidarstair.stl"
 }
 
   
