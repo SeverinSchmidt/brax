@@ -71,7 +71,7 @@ _envs = {
     'humanoid_crack': humanoid_crack.Humanoid,
     'humanoid_path': humanoid_path.Humanoid,
     'humanoid_boxes': humanoid_boxes.Humanoid,
-    'humanoid_mini_lidar: humanoid_mini_lidar.Humanoid,
+    'humanoid_mini_lidar': humanoid_mini_lidar.Humanoid,
 }
 
 
