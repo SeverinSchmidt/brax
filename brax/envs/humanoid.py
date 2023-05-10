@@ -670,11 +670,7 @@ _SYSTEM_CONFIG = """
     mass: 1.0
     frozen { all: true }
   }
-  bodies {
-    name: "Target"
-    colliders { sphere { radius: 2 }}
-    frozen { all: true }
-  }
+  
   joints {
     name: "abdomen_yz"
     parent: "torso"
