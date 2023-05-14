@@ -38,7 +38,7 @@ from brax.envs import walker2d
 from brax.envs import wrappers
 from brax.envs import humanoid_lidar
 from brax.envs import humanoid_wall
-from brax.envs import humanoid_stairs
+from brax.envs import humanoid_staircase
 from brax.envs import humanoid_path
 from brax.envs import humanoid_flag
 from brax.envs import humanoid_mini_lidar
@@ -66,7 +66,7 @@ _envs = {
     'walker2d': walker2d.Walker2d,
     'humanoid_lidar_staircase': humanoid_lidar_staircase.Humanoid,
     'humanoid_wall': humanoid_wall.Humanoid,
-    'humanoid_stairs': humanoid_stairs.Humanoid,
+    'humanoid_staircase': humanoid_staircase.Humanoid,
     'humanoid_path': humanoid_path.Humanoid,
     'humanoid_flag': humanoid_flag.Humanoid,
     'humanoid_single_lidar_staircase': humanoid_single_lidar_staircase.Humanoid,
