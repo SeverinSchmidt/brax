@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Trains a humanoid to run in the +x direction."""
+"""Trains a humanoid to climb up a Blender-modelled steep staircase with added obstacles."""
 
 import brax
 from brax import jumpy as jp
