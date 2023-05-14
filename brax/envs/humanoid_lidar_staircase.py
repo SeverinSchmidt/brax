@@ -705,7 +705,7 @@ _SYSTEM_CONFIG = """
 
 mesh_geometries {
   name: "lidar_stair"
-  path: "turbo_decimated_wall_scaled.stl"
+  path: "refined_lidarstair.stl"
 }
 
   
