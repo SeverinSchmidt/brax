@@ -283,7 +283,7 @@ class Humanoid(env.Env):
 #     moving_to_target = .5 * jp.dot(torso_delta, target_dir)
 
     torso_delta = com_after - com_before
-    target_rel = jp.array([6.5, 0, 3.7]) - com_after
+    target_rel = jp.array([6.5, 3, 3.7]) - com_after
     target_dist = jp.norm(target_rel)
     target_dir = target_rel / (1e-6 + target_dist)
     moving_to_target = 1000 * jp.dot(torso_delta, target_dir)
@@ -724,14 +724,14 @@ _SYSTEM_CONFIG = """
     position { x: 0.22 y: 0 z: 0}}
     
     colliders { sphere { radius: 0.1 }
-    position{ x: 6.5 y: 0 z: 3.7 }
+    position{ x: 6.5 y: 3 z: 3.7 }
     }
     frozen {all: true}
   }
 
   mesh_geometries {
   name: "staircase"
-  path: "challenge_staircase.stl"
+  path: "challenge_staircase_yshift.stl"
   }
 
   joints {
