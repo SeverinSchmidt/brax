@@ -220,7 +220,6 @@ class Humanoid(env.Env):
     self._exclude_current_positions_from_observation = (
         exclude_current_positions_from_observation
     )
-#     self.target_idx = self.sys.body.index['Target']
     self.torso_idx = self.sys.body.index['torso']
 
   def reset(self, rng: jp.ndarray) -> env.State:
@@ -234,10 +233,6 @@ class Humanoid(env.Env):
     obs = self._get_obs(qp, self.sys.info(qp), jp.zeros(self.action_size))
     reward, done, zero = jp.zeros(3)
     metrics = {
-#         'forward_reward': zero,
-#         'reward_linvel': zero,
-#         'reward_quadctrl': zero,
-#         'reward_alive': zero,
         'x_position': zero,
         'y_position': zero,
         'z_position': zero,
@@ -245,11 +240,7 @@ class Humanoid(env.Env):
         'x_velocity': zero,
         'y_velocity': zero,
         'z_velocity': zero,
-#         'arm_reward': zero,
-#         'knee_reward': zero,
-#         'upward_reward': zero,
         'moving_to_target': zero,
-#         'target_reward': zero,
     }
     return env.State(qp, obs, reward, done, metrics)
 
@@ -260,8 +251,6 @@ class Humanoid(env.Env):
     com_before = self._center_of_mass(state.qp)
     com_after = self._center_of_mass(qp)
     velocity = (com_after - com_before) / self.sys.config.dt
-    forward_reward = self._forward_reward_weight * velocity[0] 
-    upward_reward = 10 * velocity[2]
 
     min_z, max_z = self._healthy_z_range
     is_healthy = jp.where(qp.pos[0, 2] < min_z, x=0.0, y=1.0)
@@ -272,44 +261,28 @@ class Humanoid(env.Env):
       healthy_reward = self._healthy_reward * is_healthy
 
     ctrl_cost = self._ctrl_cost_weight * jp.sum(jp.square(action))
-#     arm_reward = 0.5 * jp.sum(jp.square(action[11:]))
-#     knee_reward = 0.5 * jp.sum(jp.square(action[6])) + 0.5 * jp.sum(jp.square(action[10])) 
-    
-    # small reward for torso moving towards target
-#     torso_delta = qp.pos[self.torso_idx] - state.qp.pos[self.torso_idx]
-#     target_rel = qp.pos[self.target_idx] - qp.pos[self.torso_idx]
-#     target_dist = jp.norm(target_rel)
-#     target_dir = target_rel / (1e-6 + target_dist)
-#     moving_to_target = .5 * jp.dot(torso_delta, target_dir)
 
+# Momentum reward function
     torso_delta = com_after - com_before
     target_rel = jp.array([6.5, 1.5, 3.7]) - com_after
     target_dist = jp.norm(target_rel)
     target_dir = target_rel / (1e-6 + target_dist)
     moving_to_target = 1000 * jp.dot(torso_delta, target_dir)
 
-#     target = jp.array([6.5, 0, 3.7])
+# Exponential reward function
+#     target = jp.array([6.5, 1.5, 3.7])
 #     target_rel = target-com_after
 #     target_dist = jp.norm(target_rel)
 #     start_dist = jp.norm(target)
 #     distance_moved = start_dist - target_dist
-#     moving_to_target = distance_moved**2
+#     moving_to_target = distance_moved**3
 
     
-   
-    #Big reward for reaching target
-#     reached_target = target_dist < 0.4
-#     target_reward = 1000.0 if reached_target else 0.0
     
     obs = self._get_obs(qp, info, action)
-    # reward = forward_reward + healthy_reward - ctrl_cost
     reward = moving_to_target
     done = 1.0 - is_healthy if self._terminate_when_unhealthy else 0.0
     state.metrics.update(
-#         forward_reward=forward_reward,
-#         reward_linvel=forward_reward,
-#         reward_quadctrl=-ctrl_cost,
-#         reward_alive=healthy_reward,
         x_position=com_after[0],
         y_position=com_after[1],
         z_position=com_after[2],
@@ -317,11 +290,7 @@ class Humanoid(env.Env):
         x_velocity=velocity[0],
         y_velocity=velocity[1],
         z_velocity=velocity[2],
-#         upward_reward=upward_reward,
         moving_to_target=moving_to_target,
-#         target_reward=target_reward,
-#         arm_reward=arm_reward,
-#         knee_reward=knee_reward,
     )
 
     return state.replace(qp=qp, obs=obs, reward=reward, done=done)
