@@ -39,9 +39,8 @@ from brax.envs import wrappers
 from brax.envs import humanoid_lidar
 from brax.envs import humanoid_wall
 from brax.envs import humanoid_stairs
-from brax.envs import humanoid_crack
 from brax.envs import humanoid_path
-from brax.envs import humanoid_boxes
+from brax.envs import humanoid_flag
 from brax.envs import humanoid_mini_lidar
 from brax.envs.env import Env, State, Wrapper
 import gym
@@ -65,13 +64,12 @@ _envs = {
     'swimmer': swimmer.Swimmer,
     'ur5e': ur5e.Ur5e,
     'walker2d': walker2d.Walker2d,
-    'humanoid_lidar': humanoid_lidar.Humanoid,
+    'humanoid_lidar_staircase': humanoid_lidar_staircase.Humanoid,
     'humanoid_wall': humanoid_wall.Humanoid,
     'humanoid_stairs': humanoid_stairs.Humanoid,
-    'humanoid_crack': humanoid_crack.Humanoid,
     'humanoid_path': humanoid_path.Humanoid,
-    'humanoid_boxes': humanoid_boxes.Humanoid,
-    'humanoid_mini_lidar': humanoid_mini_lidar.Humanoid,
+    'humanoid_flag': humanoid_flag.Humanoid,
+    'humanoid_single_lidar_staircase': humanoid_single_lidar_staircase.Humanoid,
 }
 
 
