@@ -36,12 +36,12 @@ from brax.envs import swimmer
 from brax.envs import ur5e
 from brax.envs import walker2d
 from brax.envs import wrappers
-from brax.envs import humanoid_lidar
+from brax.envs import humanoid_lidar_staircase
 from brax.envs import humanoid_wall
 from brax.envs import humanoid_staircase
 from brax.envs import humanoid_path
 from brax.envs import humanoid_flag
-from brax.envs import humanoid_mini_lidar
+from brax.envs import humanoid_single_lidar_staircase
 from brax.envs.env import Env, State, Wrapper
 import gym
 
