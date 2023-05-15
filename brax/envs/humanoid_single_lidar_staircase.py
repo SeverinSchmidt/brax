@@ -701,7 +701,7 @@ _SYSTEM_CONFIG = """
 
 mesh_geometries {
   name: "lidar_stair"
-  path: "single_lidarstair_walled.stl"
+  path: "single_lidar_staircase.stl"
 }
 
   
