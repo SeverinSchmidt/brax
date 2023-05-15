@@ -700,7 +700,7 @@ _SYSTEM_CONFIG = """
 
   mesh_geometries {
   name: "staircase"
-  path: "capture-the-flag.stl"
+  path: "flag.stl"
   }
 
   joints {
