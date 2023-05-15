@@ -700,7 +700,7 @@ _SYSTEM_CONFIG = """
 
   mesh_geometries {
   name: "staircase"
-  path: "challenge_staircase_yshift.stl"
+  path: "path.stl"
   }
 
   joints {
